@@ -1,0 +1,13 @@
+{
+	"full_size":5784,
+	"input_size":5251,
+	"output_size":5644,
+	"cased":false,
+	"rmDigit":true,
+	"sortBy":"output",
+	"minFreq":5,
+	"dim":100,
+	"initPath":"../../vocab/glove.6B.100d.txt",
+	"inputCorpus":["../../websplit/train.document","../../websplit/test.document","../../websplit/validation.document"],
+	"outputCorpus":["../../websplit/train.summary","../../websplit/test.summary","../../websplit/validation.summary"]
+}

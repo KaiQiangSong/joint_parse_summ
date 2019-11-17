@@ -1,0 +1,13 @@
+{
+	"full_size":37719,
+	"input_size":37689,
+	"output_size":37472,
+	"cased":false,
+	"rmDigit":true,
+	"sortBy":"output",
+	"minFreq":5,
+	"dim":100,
+	"initPath":"../../vocab/glove.6B.100d.txt",
+	"inputCorpus":["../../cnndm_1to1/train.document.filter","../../cnndm_1to1/test.document.filter","../../cnndm_1to1/val.document.filter"],
+	"outputCorpus":["../../cnndm_1to1/train.summary.filter","../../cnndm_1to1/test.summary.filter","../../cnndm_1to1/val.summary.filter"]
+}

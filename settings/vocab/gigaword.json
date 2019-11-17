@@ -1,0 +1,13 @@
+{
+	"full_size":72695,
+	"input_size":70706,
+	"output_size":70023,
+	"cased":false,
+	"rmDigit":true,
+	"sortBy":"output",
+	"minFreq":5,
+	"dim":100,
+	"initPath":"../../vocab/glove.6B.100d.txt",
+	"inputCorpus":["../../dataset/gigaword_eng_5/train.Ndocument","../../dataset/gigaword_eng_5/test4.Ndocument","../../dataset/gigaword_eng_5/valid2.Ndocument"],
+	"outputCorpus":["../../dataset/gigaword_eng_5/train.Nsummary","../../dataset/gigaword_eng_5/test4.Nsummary","../../dataset/gigaword_eng_5/valid2.Nsummary"]
+}

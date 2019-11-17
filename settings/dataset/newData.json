@@ -1,0 +1,22 @@
+{
+    "name": "newData",
+    "method": "build",
+    "srcFeatList": [],
+    "refFeatList": [
+        "action_map"
+    ],
+    "Parts": {
+        "train": {
+            "name": "train",
+            "path": "../../dataset/gigaword/sTrain",
+            "sorted": true,
+            "shuffled": false
+        },
+        "valid": {
+            "name": "valid",
+            "path": "../../dataset/gigaword/valid2",
+            "sorted": true,
+            "shuffled": false
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+	"name":"cnndm",
+	"method":"build",
+	"srcFeatList":[],
+	"refFeatList":["action_map"],
+	"Parts":
+	{
+		"train":
+		{
+			"name":"train",
+			"path":"../../cnndm_1to1/train",
+			"sorted":true,
+			"shuffled":false
+		},
+		"test":
+		{
+			"name":"test",
+			"path":"../../cnndm_1to1/test",
+			"sorted":false,
+			"shuffled":false
+		},
+		"valid":
+		{
+			"name":"valid",
+			"path":"../../cnndm_1to1/val",
+			"sorted":true,
+			"shuffled":false
+		}
+	}	
+}

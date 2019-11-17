@@ -1,0 +1,30 @@
+{
+	"name":"newsroom",
+	"method":"build",
+	"srcFeatList":[],
+	"refFeatList":["action_map"],
+	"Parts":
+	{
+		"train":
+		{
+			"name":"train",
+			"path":"../../newsroom/train",
+			"sorted":true,
+			"shuffled":false
+		},
+		"test":
+		{
+			"name":"test",
+			"path":"../../newsroom/test",
+			"sorted":false,
+			"shuffled":false
+		},
+		"valid":
+		{
+			"name":"valid",
+			"path":"../../newsroom/dev",
+			"sorted":true,
+			"shuffled":false
+		}
+	}	
+}

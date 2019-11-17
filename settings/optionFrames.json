@@ -1,0 +1,8 @@
+{
+	"vocabulary":"settings/vocabulary_gpt2.json",
+	"dataset":"settings/dataset_newsroom_gpt2.json",
+	"training":"settings/training_newsroom_gpt2.json",
+	"test":"settings/test_gpt2.json",
+	"network":"settings/network_gpt2FlatToken_newsroom.json",
+	"evaluation":"settings/evaluation.json"
+}

@@ -1,0 +1,20 @@
+{
+    "cased": false,
+    "rmDigit": true,
+    "sortBy": "output",
+    "minFreq": 5,
+    "dim": 100,
+    "initPath": "glove.6B.100d.txt",
+    "inputCorpus": [
+        "../../dataset/gigaword/sTrain.Ndocument",
+        "../../dataset/gigaword/valid2.Ndocument"
+    ],
+    "outputCorpus": [
+        "../../dataset/gigaword/sTrain.Nsummary",
+        "../../dataset/gigaword/valid2.Nsummary"
+    ],
+    "full_size": 4701,
+    "input_size": 4564,
+    "output_size": 4608,
+    "savePath": "settings/vocab/newData.json"
+}

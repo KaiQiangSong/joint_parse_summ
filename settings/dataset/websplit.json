@@ -1,0 +1,30 @@
+{
+	"name":"websplit",
+	"method":"build",
+	"srcFeatList":[],
+	"refFeatList":["action_map"],
+	"Parts":
+	{
+		"train":
+		{
+			"name":"train",
+			"path":"../../websplit/train",
+			"sorted":false,
+			"shuffled":true
+		},
+		"test":
+		{
+			"name":"test",
+			"path":"../../websplit/test",
+			"sorted":false,
+			"shuffled":true
+		},
+		"valid":
+		{
+			"name":"valid",
+			"path":"../../websplit/validation",
+			"sorted":false,
+			"shuffled":true
+		}
+	}	
+}
