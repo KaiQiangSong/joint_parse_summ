@@ -86,15 +86,17 @@ class dataSet(object):
             
             if 'train' in self.name or 'val' in self.name:
                 if (len(srcLine.split()) >= 100) or (len(refLine.split()) >= 50):
+                    #print("too long")
                     continue
             
             if 'train' in self.name:
                 match = len(set(srcLine.split()) & set(refLine.split()))
                 if match < 3:
+                    #print("No match")
                     continue
             
             if (len(srcLine.split()) < 1) or (len(refLine.split()) < 1):
-                #print 'Short'
+                #print('Short')
                 continue
             
             document = Sentence2ListOfIndex(srcLine, self.Vocab)
@@ -113,6 +115,7 @@ class dataSet(object):
                 lengths = [len[fet] for fet in src_feat.values()]
                 if (len(Set(lengths + [length])) > 1):
                     total += 1
+                    #print("Source Length Doesn't match")
                     print("Source Length Doesn't match", total, Index, length, lengths, file = ErrorFile)
                     print(srcLine, file = ErrorFile)
                     print(Index-1, file = ErrorFile)
@@ -126,6 +129,7 @@ class dataSet(object):
                 if (length != length_gen):
                     total += 1
                     tokens = [it[1] for it in ref_feat['action_map'] if it[0] == GEN]
+                    #print("Reference Length Doesn't match", total, Index, length, length_gen)
                     print("Reference Length Doesn't match", total, Index, length, length_gen, file=ErrorFile)
                     print(refLine, file=ErrorFile)
                     print(tokens, file=ErrorFile)

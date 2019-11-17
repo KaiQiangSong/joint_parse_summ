@@ -6,15 +6,15 @@
     "dim": 100,
     "initPath": "glove.6B.100d.txt",
     "inputCorpus": [
-        "../../dataset/gigaword/sTrain.Ndocument",
-        "../../dataset/gigaword/valid2.Ndocument"
+        "data/train.Ndocument",
+        "data/valid.Ndocument"
     ],
     "outputCorpus": [
-        "../../dataset/gigaword/sTrain.Nsummary",
-        "../../dataset/gigaword/valid2.Nsummary"
+        "data/train.Nsummary",
+        "data/valid.Nsummary"
     ],
-    "full_size": 4701,
-    "input_size": 4564,
-    "output_size": 4608,
+    "full_size": 1012,
+    "input_size": 972,
+    "output_size": 996,
     "savePath": "settings/vocab/newData.json"
 }

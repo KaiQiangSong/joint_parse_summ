@@ -8,13 +8,13 @@
     "Parts": {
         "train": {
             "name": "train",
-            "path": "../../dataset/gigaword/sTrain",
+            "path": "data/train",
             "sorted": true,
             "shuffled": false
         },
         "valid": {
             "name": "valid",
-            "path": "../../dataset/gigaword/valid2",
+            "path": "data/valid",
             "sorted": true,
             "shuffled": false
         }

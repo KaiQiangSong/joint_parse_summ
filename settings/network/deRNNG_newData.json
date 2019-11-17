@@ -1,9 +1,9 @@
 {
     "type": "LSTM2_MeanDiff_deRNNG",
-    "n_vocab": 4701,
+    "n_vocab": 1012,
     "Embedding": {
         "type": "Embedding",
-        "n_type": 4704,
+        "n_type": 1015,
         "n_dim": 100,
         "fixed": false
     },
@@ -103,7 +103,7 @@
             "predict_tok": {
                 "type": "Linear",
                 "n_in": 512,
-                "n_out": 4701,
+                "n_out": 1012,
                 "fixed": false
             },
             "switcher_copy": {

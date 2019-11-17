@@ -66,6 +66,8 @@ def train(config):
     for epoch_idx in range(startEpoch, options['training']['stopConditions']['max_epoch']):
         LOG.log('Batch Shuffle')
         datasets.batchShuffle('train')
+        print(datasets.Parts['train'].n_batches())
+        print(datasets.Parts['train'].number())
         for batch_idx in range(datasets.Parts['train'].n_batches()):
             if ((batch_idx + 1) % 10000 == 0):
                 gc.collect()
@@ -266,7 +268,7 @@ def ParsingTreeBuilding(config):
 
     def DeParse(file_prefix):
         Annotator = PyCoreNLP()
-        f_in = open(file_prefix + '.Nsummary', 'r', encoding='utf-8')
+        f_in = open(file_prefix + '.summary', 'r', encoding='utf-8')
         f_out = open(file_prefix + '.json', 'w', encoding='utf-8')
         Index = 0
         for line in f_in:
@@ -381,7 +383,7 @@ def ParsingTreeBuilding(config):
                     newData.append((1, 0))
                 elif item[0] == 'REDUCE_R':
                     newData.append((2, 0))
-                print(newData, file=f_out)
+            print(newData, file=f_out)
         return
 
     def Merge(file_prefix, featList):
@@ -413,7 +415,7 @@ def ParsingTreeBuilding(config):
         """
         DeParse(file_prefix)
         ParsingFeatures(file_prefix)
-        Vocab = loadFromPKL('newData.Vocab')
+        Vocab = loadFromPKL('vocab/newData.Vocab')
         Compress_Action_De(file_prefix, Vocab)
         Merge(file_prefix, ["action_map"])
         return
@@ -421,6 +423,29 @@ def ParsingTreeBuilding(config):
     LOG.log("Parsing Files")
     parsing(config.train_prefix)
     parsing(config.valid_prefix)
+
+def Tokenize(config):
+    LOG.log('Tokenizing the corpus.')
+    def tokenize(file_prefix, file_suffix):
+        Annotator = PyCoreNLP()
+        f_in = open(file_prefix + '.' + file_suffix, 'r', encoding='utf-8')
+        f_out = open(file_prefix + '.N' + file_suffix, 'w', encoding='utf-8')
+        Index = 0
+        for line in f_in:
+            Index += 1
+            text = line.strip()
+            anno = Annotator.annotate(text.encode('ascii', 'ignore'), mode = "PROP_TOKENIZE", eolonly=True)
+            tokens = []
+            for sent in anno['sentences']:
+                for token in sent["tokens"]:
+                    tokens.append(token["originalText"].lower())
+            print(" ".join(tokens), file=f_out)
+        return
+    tokenize(config.train_prefix, 'document')
+    tokenize(config.train_prefix, 'summary')
+    tokenize(config.valid_prefix, 'document')
+    tokenize(config.valid_prefix, 'summary')
+    return
 
 
 def argLoader():
@@ -456,17 +481,18 @@ def argLoader():
         }
 
     elif args.do_train:
-        if (not path.exists(args.train_prefix+'.Ndocument')) or (not path.exists(args.train_prefix + '.Nsummary')):
-            print('No training input file. Please use "--train_prefix train" to assign "train.Ndocument" and "train.Nsummary"')
+        if (not path.exists(args.train_prefix+'.document')) or (not path.exists(args.train_prefix + '.summary')):
+            print('No training input file. Please use "--train_prefix train" to assign "train.document" and "train.summary"')
             return args
 
-        if (not path.exists(args.valid_prefix+'.Ndocument')) or (not path.exists(args.valid_prefix + '.Nsummary')):
-            print('No validation input file. Please use "--valid_prefix valid" to assign "valid.Ndocument" and "valid.Nsummary"')
+        if (not path.exists(args.valid_prefix+'.document')) or (not path.exists(args.valid_prefix + '.summary')):
+            print('No validation input file. Please use "--valid_prefix valid" to assign "valid.document" and "valid.summary"')
             return args
 
 
         args.optionsFrame = {}
         args.optionsFrame['dataset'] = datasetBuilding(args)
+        Tokenize(args)
         vocab_setting = vocabularyBuilding(args)
         args.optionsFrame['vocabulary'] = vocab_setting['savePath']
         args.vocab_size = vocab_setting["full_size"]
