@@ -24,7 +24,7 @@ We provide the source code for the paper **"[Joint Parsing and Generation for Ab
 
 ## Dependencies
 
-The code is written in Python (v3.7) and Pytorch (v1.3.0). We suggest the following environment:
+The code is written in Python (v3.7) and Pytorch (v1.3). We suggest the following environment:
 
 * A Linux machine (Ubuntu) with GPU
 * [Python (v3.7)](https://www.anaconda.com/download/)
