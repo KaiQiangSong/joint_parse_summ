@@ -66,6 +66,7 @@ $ pip install pyrouge
     $ cd joint_parse_summ
     $ unzip others.zip
     $ rm others.zip
+    $ mkdir log
     ```
 
 2. Generating Summaries with our joint parsing and generating summarization model trained on selected dataset including: gigaword (default), newsroom, cnndm, websplit.
