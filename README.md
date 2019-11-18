@@ -39,7 +39,7 @@ $ bash Anaconda3-2019.10-Linux-x86_64.sh
 $ source ~/.bashrc
 ```
 
-To install [PyTorch (v1.3)](https://pytorch.org/) and its dependencies, run the below command (you may want to add `export MKL_THREADING_LAYER=GNU` to "~/.bashrc" for future use).
+To install [PyTorch (v1.3)](https://pytorch.org/) and its dependencies, run the below command.
 ```
 $ conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
 ```
