@@ -12,7 +12,7 @@ We provide the source code for the paper **"[Joint Parsing and Generation for Ab
 
 * Our system seeks to re-write a lengthy sentence, often the 1st sentence of a news article, to a concise, title-like summary. The average input and output lengths are 31 words and 8 words, respectively. 
 
-* The code takes as input a text file with one sentence per line. It generates a 2 text files ("summary.txt" and "parse.txt") in the working folder as the outputs, where each source sentence is replaced by a title-like summary and a corresponding dependency parsing tree.
+* The code takes as input a text file with one sentence per line. It generates 2 text files ("summary.txt" and "parse.txt") in the working folder as the outputs, where each source sentence is replaced by a title-like summary and a corresponding dependency parsing tree.
 
 * Example input and output are shown below. 
   > Belgian authorities are investigating the killing of two policewomen and a passerby in the eastern city of Liege on Tuesday as a terror attack, the country's prosecutor said.
