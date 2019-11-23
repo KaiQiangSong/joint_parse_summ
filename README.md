@@ -129,4 +129,4 @@ $ pip install pyrouge
 }
 ```
 
-HINT*: 60K batches (used for `earlyStop_bound`) correspond to about 1 epoch for our dataset. 24K batches (used for `rate_Bound`) is slightly less than half of an epoch.
+HINT*: 60K batches (used for `earlyStopping_bound`) correspond to about 1 epoch for our dataset. 24K batches (used for `rateReduce_bound`) is slightly less than half of an epoch.
