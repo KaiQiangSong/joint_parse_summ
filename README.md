@@ -59,7 +59,7 @@ $ pip install pyrouge
 
 ## I Want to Generate Summaries..
 
-1. Clone this repo. Download this ZIP  file ([`others.zip`](https://drive.google.com/file/d/1Ace-8hgwNBUORE06AZU3AesY4f4jXACL/view?usp=sharing)) containing vocabulary files and trained models. Move the ZIP file to the working folder and uncompress.
+1. Clone this repo. Download this ZIP  file ([`others.zip`](http://i2u.world/kqsong/model/aaai2020_kaiqiang_1/others.zip)) containing vocabulary files and trained models. Move the ZIP file to the working folder and uncompress.
     ```
     $ git clone git@github.com:KaiQiangSong/joint_parse_summ.git
     $ mv others.zip joint_parse_summ
