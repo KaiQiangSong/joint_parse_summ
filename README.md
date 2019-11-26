@@ -1,6 +1,6 @@
 # Joint Parsing and Generation for Abstractive Summarization
 
-We provide the source code for the paper **"[Joint Parsing and Generation for Abstractive Summarization](http://i2u.world/kqsong/paper/aaai2020_kaiqiang_1.pdf)"**, accepted at AAAI'20. If you find the code useful, please cite the following paper. 
+We provide the source code for the paper **"[Joint Parsing and Generation for Abstractive Summarization](https://arxiv.org/pdf/1911.10389.pdf)"**, accepted at AAAI'20. If you find the code useful, please cite the following paper. 
 
     @inproceedings{joint-parsing-summarization:2020,
      Author = {Kaiqiang Song and Logan Lebanoff and Qipeng Guo and Xipeng Qiu and Xiangyang Xue and Chen Li and Dong Yu and Fei Liu},
